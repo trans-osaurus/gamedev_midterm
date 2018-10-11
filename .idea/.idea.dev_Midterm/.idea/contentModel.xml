@@ -6,7 +6,9 @@
     <e p="C:\Users\Oliver\Desktop\ClassWork\Intermediate-GameDev\dev_Midterm" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Movement-Player.cs" t="Include" />
+        <e p="corgimovement.cs" t="Include" />
+        <e p="movement.cs" t="Include" />
+        <e p="MoveObject.cs" t="Include" />
       </e>
       <e p="dev_Midterm.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />
