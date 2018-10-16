@@ -38,11 +38,14 @@ public class corgitrigger : MonoBehaviour
 
 	void OnTriggerEnter(Collider corgicollider)
 	{
-		corgisfound++;
-		myTextDisplay.text = "Corgis found:" + corgisfound.ToString();
-		//corgicollider.GetComponent<Rigidbody>().isKinematic = true;
+		if (corgicollider.gameObject.CompareTag("Corgi"))
+		{
+			corgisfound++;
+			myTextDisplay.text = "Corgis found:" + corgisfound.ToString();
+			//corgicollider.GetComponent<Rigidbody>().isKinematic = true;
 
-
+		}
+		
 	}
 
 }
