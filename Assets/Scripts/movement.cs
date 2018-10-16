@@ -17,6 +17,14 @@ public class movement : MonoBehaviour
     
     // Update is called once per frame
     void Update () {
+        
+        //cursor locked to the center of the screen
+       // if (Input.GetMouseButtonDown(0)) //0 = left, 1 = right, 2 = middleclick
+        //{
+     //       Cursor.lockState = CursorLockMode.Locked;
+       //     Cursor.visible = false;
+       // }
+        
         //mouselook. these r mouse deltas / differences between different frames
         //0 when nothing is moving. this ISNT MOUSE POSITION
         float mouseX = Input.GetAxis("Mouse X"); //horizontal mouse movement
@@ -25,8 +33,8 @@ public class movement : MonoBehaviour
         //rotate the camera based on mouse input
         //pitch: up and down rotation (x axis) yaw = left and right rotation (Y axis) roll = rolling (z axis)
         //first rotate body based on horizontal mouse movement
-        transform.Rotate( 0f, mouseX, 0f);
-        Camera.main.transform.Rotate(-mouseY, 0f, 0f);
+        transform.Rotate( 0f, mouseX * 2, 0f);
+        Camera.main.transform.Rotate(-mouseY * 2, 0f, 0f);
 
         
         //WASD MOVEMENT

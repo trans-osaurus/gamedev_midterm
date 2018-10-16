@@ -26,8 +26,10 @@ public class MoveObject : MonoBehaviour {
 		item.GetComponent<Rigidbody>().isKinematic = true;
 		item.transform.position = guide.transform.position;
 		item.transform.rotation = guide.transform.rotation;
-		item.transform.parent = tempParent.transform; 
-		
+		item.transform.parent = tempParent.transform;
+
+		GetComponent<corgimovement>().Pickedup = true;
+
 	}
 
 	private void OnMouseUp()
@@ -36,5 +38,7 @@ public class MoveObject : MonoBehaviour {
 		item.GetComponent<Rigidbody>().isKinematic = false;
 		item.transform.parent = null;
 		item.transform.position = guide.transform.position;
+
+		GetComponent<corgimovement>().Pickedup = false;
 	}
 }
