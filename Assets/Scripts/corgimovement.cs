@@ -43,6 +43,10 @@ public class corgimovement : MonoBehaviour {
 				transform.Translate(0f, 0f, Time.deltaTime);
 			}
 
+			if (transform.rotation.eulerAngles.x != 0 || transform.rotation.eulerAngles.z != 0)
+			{
+				transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+			}
 		}
 	}
 	

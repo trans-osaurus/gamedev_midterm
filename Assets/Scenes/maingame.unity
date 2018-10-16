@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 4164005}
   m_Layer: 0
   m_Name: Corgi (2)
-  m_TagString: Untagged
+  m_TagString: Corgi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2858,7 +2858,7 @@ GameObject:
   - component: {fileID: 1909904852}
   m_Layer: 0
   m_Name: Corgi
-  m_TagString: Untagged
+  m_TagString: Corgi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2988,7 +2988,7 @@ GameObject:
   - component: {fileID: 2036714807}
   m_Layer: 0
   m_Name: Corgi (1)
-  m_TagString: Untagged
+  m_TagString: Corgi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

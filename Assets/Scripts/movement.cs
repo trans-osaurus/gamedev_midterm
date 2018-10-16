@@ -6,20 +6,23 @@ public class movement : MonoBehaviour
 {
 
     public float moveSpeed = 10f;
+
+    public float maxSpeed;
     //this variable remembers input and passes it to physics
     private Vector3 inputVector;
-    
 
+    private Rigidbody rb;
     // Use this for initialization
-    void Start () {
-        
+    void Start ()
+    {
+        rb = GetComponent<Rigidbody>();
     }
     
     // Update is called once per frame
     void Update () {
         
         //cursor locked to the center of the screen
-       // if (Input.GetMouseButtonDown(0)) //0 = left, 1 = right, 2 = middleclick
+        //if (Input.GetMouseButtonDown(0)) //0 = left, 1 = right, 2 = middleclick
         //{
      //       Cursor.lockState = CursorLockMode.Locked;
        //     Cursor.visible = false;
@@ -58,6 +61,8 @@ public class movement : MonoBehaviour
     void FixedUpdate()
     {
         //override object's velocity with desired inputVector direction
-        GetComponent<Rigidbody>().velocity = inputVector * moveSpeed + Physics.gravity * 0.5f;
+        rb.velocity += inputVector * moveSpeed;
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+
     }
 }
